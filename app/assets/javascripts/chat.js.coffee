@@ -10,9 +10,7 @@ client.subscribe '/chat', (payload)->
   $('#chat').append("<li>#{time} : #{payload.message}</li>")
 
 $(document).ready ->
-  input = $('input')
-  button = $('button')
-  button.click ->
+  submit = ->
     button.attr('disabled', 'disabled')
     button.text('Posting...')
     publication = client.publish '/chat',
@@ -25,6 +23,12 @@ $(document).ready ->
     publication.errback ->
       button.removeAttr('disabled')
       button.text('Try again')
+
+  input = $('input')
+  button = $('button')
+  button.click submit
+  input.keypress (event)->
+    submit() if event.which == 13
 
 # in case anyone wants to play with the inspector.
 window.client = client
