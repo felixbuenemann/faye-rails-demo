@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '3.2.11'
-gem 'faye-rails', '~> 1.0.6'
+gem 'rails', '3.2.16'
+gem 'faye-rails', github: 'felixbuenemann/faye-rails', branch: 'passenger-support'
 gem 'thin'
 gem 'haml-rails'
 
