@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/felixbuenemann/faye-rails.git
-  revision: 09494f8e21fa14c0561f6b66bb4cabde686a5c6f
+  revision: 7d6d0b773b4d986fabd7161cf5a1356e03a58ecf
   branch: passenger-support
   specs:
     faye-rails (1.0.11)
